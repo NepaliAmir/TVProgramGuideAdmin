@@ -1,0 +1,25 @@
+﻿<div class="panel panel-default table-responsive">
+    <div>
+        <table class="table table-striped" id="dataTable">
+            <thead>
+                <tr>
+                    <th>ChannelId</th>
+                    <th>Logo</th>
+                    <th>Name</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in channels">
+                    <td>{{item.ChannelId}}</td>
+                    <td><img ng-src="{{item.ImagePath}}" /></td>
+                    <td>{{item.ChannelName}}</td>
+                    <td><input type="button" class="btn btn-primary" value="edit" ng-click="fnEditChannelName(item.Id,item.ChannelName)"></td>
+                    <td><a href="#!/Programs/{{item.ChannelId}}" target="_self">Programs List</a></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- /.padding-md -->
+</div><!-- /panel -->

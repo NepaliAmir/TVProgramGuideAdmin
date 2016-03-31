@@ -1,0 +1,35 @@
+﻿<div class="panel bg-info fadeInDown animation-delay4">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-2">
+                Name
+            </div>
+            <div class="col-lg-7">
+                <input class="form-control input-group-lg" type="text" ng-model="selectedChannel.ChannelName" />
+            </div>
+            <div class="col-lg-1">
+                <input class="btn btn-success" type="button" value="Save" ng-click="fnSaveChannelName()">
+            </div>
+        </div>
+        <div class="row">
+            <form name="newPhotosForm" role="form">
+                <div class="form-group">
+                    <div>
+                        <div class="col-lg-2">
+                            <label>Browse</label>
+                        </div>
+                        <div class="col-lg-7">
+                            <input type="file" name="attachment"
+                                   class="form-control" data-ak-file-model="selectedChannel.image" />
+                        </div>
+                        <div class="col-lg-1">
+                            <input class="btn btn-primary" type="button" data-ng-click="uploadImage(selectedChannel)" value="upload">
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
