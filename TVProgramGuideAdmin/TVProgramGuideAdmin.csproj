@@ -266,9 +266,9 @@
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\bootstrap\css\bootstrap.css" />
-    <Content Include="Scripts\css\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.min.css" />
     <Content Include="Scripts\bootstrap\js\bootstrap.js" />
-    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
     <Content Include="Scripts\css\bootstrap-timepicker.css" />
     <Content Include="Scripts\css\bootstrap-wysihtml5.css" />
     <Content Include="Scripts\css\chosen\chosen-sprite%402x.png" />

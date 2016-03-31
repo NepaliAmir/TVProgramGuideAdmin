@@ -20,7 +20,7 @@ namespace TVProgramGuideAdmin
                                          "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-       "~/Scripts/js/bootstrap.js",
+       "~/Scripts/bootstrap/js/bootstrap.js",
        "~/Scripts/js/jquery.flot.min.js",
        "~/Scripts/js/rapheal.min.js",
         "~/Scripts/js/morris.min.js",
@@ -33,16 +33,21 @@ namespace TVProgramGuideAdmin
        "~/Scripts/js/jquery.cookie.min.js",
        "~/Scripts/js/endless/endless_dashboard.js",
        "~/Scripts/js/endless/endless.js"
-      ));
+));
 
             bundles.Add(new StyleBundle("~/Scripts/css").Include(
-                 "~/Scripts/css/bootstrap.min.css",
+                 "~/Scripts/bootstrap/css/bootstrap.min.css",
                  "~/Scripts/css/font-awesome.min.css",
                  "~/Scripts/css/pace.css",
                  "~/Scripts/css/colorbox/colorbox.css",
                  "~/Scripts/css/morris.css",
                  "~/Scripts/css/endless.min.css",
                  "~/Scripts/css/endless-skin.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                    "~/Scripts/angular/angular.js",
+                    "~/Scripts/angular/angular-route.js"
+                     ));
 
         }
     }
