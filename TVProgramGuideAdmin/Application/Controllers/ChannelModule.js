@@ -17,6 +17,8 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             $scope.channels = response.data;
         })
 
+
+
         $scope.fnEditChannelName = function (id, ChannelName) {
 
             $scope.selectedChannel.ChannelName = ChannelName;
@@ -36,7 +38,6 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             entityService.saveImageLogo(channels).then(function (data) { });
             entityService.updateImagePath(imageDetail).then(function () { alert('the post was success'); });
         };
-
 
     }
 ]);

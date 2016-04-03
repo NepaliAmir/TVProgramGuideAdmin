@@ -2,7 +2,7 @@
 (function () {
     angular.module("main")
            .factory("entityService", ["akFileUploaderService", "$http", function (akFileUploaderService, $http) {
-               //var BaseUrl = 'http://localhost:58976/api/';
+               ////var BaseUrl = 'http://localhost:58976/api/';
                var saveImageLogo = function (imageLogo) {
                    return akFileUploaderService.saveModel(imageLogo, "/api/Photo/Post");
                };
@@ -31,7 +31,6 @@
                    saveUpdate: saveUpdate,
                    updateImagePath: updateImagePath
                };
-
 
            }]);
 })();
