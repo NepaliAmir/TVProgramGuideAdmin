@@ -17,36 +17,6 @@
                 </tr>
             </thead>
             <tbody>
-               
-                <tr>
-                    <td>#1003</td>
-                    <td>Casual Boots</td>
-                    <td>$99</td>
-                    <td>100</td>
-                    <td>12</td>
-                    <td>Oct 06,2013</td>
-                    <td><span class="label label-success">In Stock</span></td>
-                </tr>
-                <tr>
-                    <td>#1004</td>
-                    <td>Lambskin Sport Coat</td>
-                    <td>$4000</td>
-                    <td>7</td>
-                    <td>41</td>
-                    <td>Oct 06,2013</td>
-                    <td><span class="label label-success">In Stock</span></td>
-                </tr>
-               
-               
-                <tr>
-                    <td>#1011</td>
-                    <td>Iphone 5</td>
-                    <td>$400</td>
-                    <td>300</td>
-                    <td>152</td>
-                    <td>Sep 27,2013</td>
-                    <td><span class="label label-danger">In stock</span></td>
-                </tr>
                 <tr>
                     <td>#1012</td>
                     <td>Ipad</td>
@@ -55,6 +25,15 @@
                     <td>103</td>
                     <td>Sep 25,2013</td>
                     <td><span class="label label-success">In Stock</span></td>
+                </tr>
+                <tr ng-repeat="program in programs">
+                    <td>{{item.ProgramId}}</td>
+                    <td>{{item.ProgramName}}</td>
+                    <td>{{item.StartTime}}</td>
+                    <td>{{item.Endtime}}</td>
+                    <td>{{item.Day}}</td>
+                    <td>{{item.Date}}</td>
+                    <td> <button class="btn btn-xs btn-info" type="button" value="edit" ng-click="fnEditProgramDetails(item.Id,item.ChannelName)"></button></td>
                 </tr>
             </tbody>
         </table>
