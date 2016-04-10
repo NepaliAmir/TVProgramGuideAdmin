@@ -1,21 +1,22 @@
 ﻿<div class="panel panel-default table-responsive">
     <div>
-        <table class="table table-striped" id="dataTable">
+        <table class="table table-condensed">
             <thead>
                 <tr>
                     <th>ChannelId</th>
+                    <th>Category</th>
                     <th>Logo</th>
                     <th>Name</th>
-                    <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in channels">
+                <tr ng-repeat="item in channels" ng-click="fnEditChannelName(item.Id,item.ChannelName)">
                     <td>{{item.ChannelId}}</td>
-                    <td><img ng-src="{{item.ImagePath}}" /></td>
+                    <td>{{item.CategoryDescription}}</td>
+                    <td><img ng-src="{{item.LogoPath}}" /></td>
                     <td>{{item.ChannelName}}</td>
-                    <td> <button class="btn btn-xs btn-info" type="button" value="edit" ng-click="fnEditChannelName(item.Id,item.ChannelName)"></button></td>
+                    <td> <!--<link type="" value="edit" "></link>--></td>
                     <td><a href="#!/Programs/{{item.ChannelId}}" target="_self">Programs List</a></td>
 
                 </tr>

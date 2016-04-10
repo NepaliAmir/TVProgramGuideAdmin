@@ -14,9 +14,12 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
         }
 
         entityService.getChannelName().then(function (response) {
+            //debugger;
             $scope.channels = response.data;
         })
-
+        entityService.getallChannelCategory().then(function (response) {
+             $scope.channelCategories = response.data;
+        })
 
 
         $scope.fnEditChannelName = function (id, ChannelName) {
@@ -39,5 +42,6 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             entityService.updateImagePath(imageDetail).then(function () { alert('the post was success'); });
         };
 
+       
     }
 ]);
