@@ -1,52 +1,44 @@
 ﻿<div class="panel bg-info fadeInDown animation-delay4">
     <div class="panel-body">
         <div class="row">
-            <div class="col-lg-2">
-                Name
-            </div>
-            <div class="col-lg-7">
-                <input class="form-control input-group-lg" type="text" ng-model="selectedChannel.ChannelName" />
-            </div>
-            <div class="col-lg-1">
-                <input class="btn btn-success" type="button" value="Save" ng-click="fnSaveChannelName()">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                Category
-            </div>
-            <div class="col-lg-9">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Select
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li ng-repeat="category in channelCategories">{{category.Description}}</li>
-                    </ul>
+            <div class="col-lg-3">
+                <div class="col-lg-2">
+                    Name
+                </div>
+                <div class="col-lg-10">
+                    <input class="form-control input-group-lg" type="text" ng-model="selectedChannel.ChannelName" />
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <form name="newPhotosForm" role="form">
-                <div class="form-group">
-                    <div>
-                        <div class="col-lg-2">
-                            <label>Browse</label>
-                        </div>
-                        <div class="col-lg-7">
-                            <input type="file" name="attachment"
-                                   class="form-control" data-ak-file-model="selectedChannel.image" />
-                        </div>
-                        <div class="col-lg-1">
-                            <input class="btn btn-primary" type="button" data-ng-click="uploadImage(selectedChannel)" value="upload">
-
-                        </div>
+            <div class="col-lg-4">
+                <div class="col-lg-2">
+                    Category
+                </div>
+                <div class="col-lg-8">
+                    <select class="form-control chzn-select">
+                        <option ng-repeat="category in channelCategories">{{category.Description}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <input class="btn btn-success" type="button" value="Save" ng-click="fnSaveChannelName()">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col-lg-10">
+                    <div class="col-lg-3">
+                        Browse
+                    </div>
+                    <div class="col-lg-9">
+                        <input type="file" name="attachment"
+                               class="form-control" data-ak-file-model="selectedChannel.image" />
                     </div>
                 </div>
-            </form>
+                <div class="col-lg-2">
+                    <input class="btn btn-primary" type="button" data-ng-click="uploadImage(selectedChannel)" value="upload">
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 

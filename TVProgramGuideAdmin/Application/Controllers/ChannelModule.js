@@ -10,6 +10,7 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             Id: '',
             ChannelId: '',
             ChannelName: '',
+            ChannelCategoryId:'',
             image: ''
         }
 
@@ -22,14 +23,19 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
         })
 
 
-        $scope.fnEditChannelName = function (id, ChannelName) {
+        $scope.fnEditChannelName = function (id, ChannelName, ChannelCategoryId) {
 
             $scope.selectedChannel.ChannelName = ChannelName;
             $scope.selectedChannel.ChannelId = id;
+            $scope.selectedChannel.ChannelCategoryId = id;
         }
 
         $scope.fnSaveChannelName = function () {
-            var channelDetail = { "ChannelId": $scope.selectedChannel.ChannelId, "ChannelName": $scope.selectedChannel.ChannelName };
+            var channelDetail = {
+                "ChannelId": $scope.selectedChannel.ChannelId,
+                "ChannelName": $scope.selectedChannel.ChannelName,
+                "ChannelCategoryId": $scope.selectedChannel.ChannelCategoryId
+            };
             entityService.saveUpdate(channelDetail).then(function () { alert('Channel Name is Updated'); });
         }
 
