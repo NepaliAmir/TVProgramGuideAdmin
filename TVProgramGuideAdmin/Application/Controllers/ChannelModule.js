@@ -10,7 +10,7 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             Id: '',
             ChannelId: '',
             ChannelName: '',
-            ChannelCategoryId:'',
+            ChannelCategoryId: '',
             image: ''
         }
 
@@ -19,17 +19,23 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
             $scope.channels = response.data;
         })
         entityService.getallChannelCategory().then(function (response) {
-             $scope.channelCategories = response.data;
+            $scope.channelCategories = response.data;
         })
 
 
-        $scope.fnEditChannelName = function (id, ChannelName, ChannelCategoryId) {
+        $scope.fnEditChannelName = function (id, ChannelName, ChannelCategoryId, CategoryDescription) {
 
             $scope.selectedChannel.ChannelName = ChannelName;
             $scope.selectedChannel.ChannelId = id;
-            $scope.selectedChannel.ChannelCategoryId = id;
+            $scope.selectedChannel.ChannelCategoryId = ChannelCategoryId;
+            $scope.selectedChannel.CategoryDescription = CategoryDescription;
+            alert($scope.selectedChannel.ChannelCategoryId);
         }
 
+        $scope.getCategoryId = function () {
+            var ChannelCategoryId = $scope.amir;
+            alert(ChannelCategoryId);
+        }
         $scope.fnSaveChannelName = function () {
             var channelDetail = {
                 "ChannelId": $scope.selectedChannel.ChannelId,
@@ -44,10 +50,10 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
 
             console.log(channels.image.name + "" + $scope.ChannelId);
 
-            entityService.saveImageLogo(channels).then(function (data) { });
+            entityService.saveImageLogo(channels).then(function (data) { alert('the post was success'); });
             entityService.updateImagePath(imageDetail).then(function () { alert('the post was success'); });
         };
 
-       
+
     }
 ]);

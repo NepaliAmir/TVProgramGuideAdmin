@@ -11,12 +11,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in channels" ng-click="fnEditChannelName(item.Id,item.ChannelName)">
+                <tr ng-repeat="item in channels" ng-click="fnEditChannelName(item.Id,item.ChannelName,item.ChannelCategoryId,item.CategoryDescription)">
                     <td>{{item.ChannelId}}</td>
                     <td>{{item.CategoryDescription}}</td>
                     <td><img ng-src="{{item.LogoPath}}" /></td>
                     <td>{{item.ChannelName}}</td>
-                    <td> <!--<link type="" value="edit" "></link>--></td>
                     <td><a href="#!/Programs/{{item.ChannelId}}" target="_self">Programs List</a></td>
 
                 </tr>
