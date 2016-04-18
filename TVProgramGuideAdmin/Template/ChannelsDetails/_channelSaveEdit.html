@@ -13,13 +13,17 @@
                 <div class="col-lg-2">
                     Category
                 </div>
+                <!--ng-model="selectedChannel.ChannelCategoryId"-->
                 <div class="col-lg-8">
-                    <!--<select class="form-control chzn-select" ng-model="selectedChannel.CategoryDescription">
-                        <option ng-repeat="category in channelCategories">{{category.Description}}</option>
+                    <select class="form-control chzn-select"
+                            data-ng-options="category.ChannelCategoryId as category.Description for category in channelCategories"
+                            ng-model="catid" ng-change="getCategoryId(catid)">
+                        <option value="" disabled>Select Category</option>
+                    </select>
+
+                    <!--<select data-ng-options="h.id as h.time for h in dataDiri.home_service_time" ng-model="jamlayanan ">
+                        <option value="" disabled>Select</option>
                     </select>-->
-                    <select class="form-control chzn-select" ng-model="amir"
-                            ng-options="category.ChannelCategoryId as category.Description for category in channelCategories track by category.ChannelCategoryId"
-                            ng-change="getCategoryId()"></select>
                 </div>
                 <div class="col-lg-2">
                     <input class="btn btn-success" type="button" value="Save" ng-click="fnSaveChannelName()">

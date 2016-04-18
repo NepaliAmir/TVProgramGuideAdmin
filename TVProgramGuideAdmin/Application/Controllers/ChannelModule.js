@@ -24,17 +24,17 @@ channel.controller('channelController', ['$scope', '$http', '$filter', "entitySe
 
 
         $scope.fnEditChannelName = function (id, ChannelName, ChannelCategoryId, CategoryDescription) {
-
+            debugger;
             $scope.selectedChannel.ChannelName = ChannelName;
             $scope.selectedChannel.ChannelId = id;
             $scope.selectedChannel.ChannelCategoryId = ChannelCategoryId;
             $scope.selectedChannel.CategoryDescription = CategoryDescription;
-            alert($scope.selectedChannel.ChannelCategoryId);
+            $scope.catid = ChannelCategoryId;
         }
 
-        $scope.getCategoryId = function () {
-            var ChannelCategoryId = $scope.amir;
-            alert(ChannelCategoryId);
+        $scope.getCategoryId = function (id) {
+            $scope.selectedChannel.ChannelCategoryId = id;
+            alert($scope.selectedChannel.ChannelCategoryId);
         }
         $scope.fnSaveChannelName = function () {
             var channelDetail = {
